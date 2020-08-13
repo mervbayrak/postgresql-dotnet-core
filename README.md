@@ -34,8 +34,6 @@ $ dotnet ef migrations add Initial
 Generate a new migration using Visual Studio Package Manager Console (from menu: Tools -> NuGet Package Manager -> Package Manager Console):
 
 ```
-
-
 update-database
 ```
  Or, from the command line via DotNet CLI:
