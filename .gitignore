@@ -9,3 +9,8 @@
 /PostgreSqlDotnetCore/PostgreSql.Core/obj
 /PostgreSqlDotnetCore/PostgreSql.Entities/obj
 /PostgreSqlDotnetCore/PostgreSql.DataAccess/obj
+/PostgreSqlDotnetCore/.vs/PostgreSqlDotnetCore/DesignTimeBuild
+/PostgreSqlDotnetCore/PostgreSql.Business/bin/Debug/netcoreapp3.1
+/PostgreSqlDotnetCore/PostgreSql.DAL/bin/Debug/netcoreapp3.1
+/PostgreSqlDotnetCore/PostgreSql.DAL/obj
+/PostgreSqlDotnetCore/PostgreSql.Entities/bin/Debug/netcoreapp3.1
