@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\PostgreSql.DAL\PostgreSql.DAL.csproj" />
   </ItemGroup>
 
 </Project>
