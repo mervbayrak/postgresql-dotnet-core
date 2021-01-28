@@ -8,4 +8,8 @@
     <ProjectReference Include="..\PostgreSql.DAL\PostgreSql.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.4.0" />
+  </ItemGroup>
+
 </Project>

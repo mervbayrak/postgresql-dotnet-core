@@ -1,6 +1,7 @@
 ﻿using PostgreSql.Business.Abstract;
+using PostgreSql.Business.ValidationRules.FluentValidation;
+using PostgreSql.Core.CrossCuttingConcers.FluentValidation;
 using PostgreSql.DAL.Abstract;
-using PostgreSql.DAL.Concrete.EntityFramework.Management;
 using PostgreSql.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,29 +12,28 @@ namespace PostgreSql.Business.Concrete
     public class UserManager : IUserManager
     {
         private IUserDAL _userDAL;
-        public UserManager() : this(new EFUserDAL()) { }
-
-        public UserManager(EFUserDAL userDAL)
+        public UserManager(IUserDAL userDAL)
         {
             _userDAL = userDAL;
         }
-        public void Add(Users u)
+        public void Add(User u)
         {
+            ValidationTool.FluentValidate(new UserValidator(), u);
             _userDAL.Add(u);
         }
-        public void Update(Users u)
+        public void Update(User u)
         {
             _userDAL.Update(u);
         }
-        public void Delete(Users u)
+        public void Delete(User u)
         {
             _userDAL.Delete(u);
         }
-        public Users GetById()
+        public User GetById()
         {
             return _userDAL.Get();
         }
-        public List<Users> GetList()
+        public List<User> GetList()
         {
             return _userDAL.GetList();
         }

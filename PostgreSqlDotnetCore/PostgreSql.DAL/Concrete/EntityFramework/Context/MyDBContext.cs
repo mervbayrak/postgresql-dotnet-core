@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PostgreSql.DAL.Concrete.EntityFramework.Mappings;
 using PostgreSql.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace PostgreSql.DAL.Concrete.EntityFramework.Context
         static String DbConnStr = String.Format("Server={0};Port=5432;User Id={1};Password={2};Database=MyDb;", DbAddr, DbUserId, DbPass);
 
 
-        DbSet<Users> Users { get; set; }
+        DbSet<User> Users { get; set; }
         public MyDBContext() { }
 
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options) { }
@@ -27,6 +28,8 @@ namespace PostgreSql.DAL.Concrete.EntityFramework.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }

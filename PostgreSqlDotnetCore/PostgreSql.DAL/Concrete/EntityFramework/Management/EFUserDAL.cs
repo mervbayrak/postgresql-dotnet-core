@@ -8,7 +8,7 @@ using System.Text;
 
 namespace PostgreSql.DAL.Concrete.EntityFramework.Management
 {
-    public class EFUserDAL : EFEntityRepositoryBase<MyDBContext, Users>, IUserDAL
+    public class EFUserDAL : EFEntityRepositoryBase<MyDBContext, User>, IUserDAL
     {
     }
 }

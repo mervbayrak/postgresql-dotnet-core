@@ -7,10 +7,10 @@ namespace PostgreSql.Business.Abstract
 {
     public interface IUserManager
     {
-        void Add(Users u);
-        void Update(Users u);
-        void Delete(Users u);
-        Users GetById();
-        List<Users> GetList();
+        void Add(User u);
+        void Update(User u);
+        void Delete(User u);
+        User GetById();
+        List<User> GetList();
     }
 }

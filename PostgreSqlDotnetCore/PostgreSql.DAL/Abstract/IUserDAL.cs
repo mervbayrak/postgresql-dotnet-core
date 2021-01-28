@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PostgreSql.DAL.Abstract
 {
-    public interface IUserDAL : IEntityRepository<Users>
+    public interface IUserDAL : IEntityRepository<User>
     {
     }
 }
